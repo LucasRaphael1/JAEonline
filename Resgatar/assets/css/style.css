@@ -287,15 +287,14 @@ body.dark .switch::before{
 }
 .timer-body{
     text-align: center;
-    padding: 100px 200px;
-    font-family: sans-serif;
+    padding: 100px 400px;
+    font-family: sans-serif;    
     font-weight: lighter;
 }
 #timer {
-    font-size: 3em;
+    font-size: 1.9em;
     font-weight: 100;
-    color: white;
-    padding: 20px;
+    padding: 50px;
     width: 700px;
     color: white;
 
@@ -303,12 +302,12 @@ body.dark .switch::before{
 
 #timer div {
     display: inline-block;
-    min-width: 90px;
-    padding: 15px;
+    min-width: 100px;
+    padding: 25px;
     background: #020b43;
     border-radius: 10px;
     border: 2px solid #030d52;
-    margin: 15px;
+    margin: 0 15px 0 15px;
 }
 
 #timer div span {
@@ -317,4 +316,221 @@ body.dark .switch::before{
     margin-top: 15px;
     font-size: .35em;
     font-weight: 400;
+}
+
+.resgatar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.card{
+    position: relative;
+    width: 600px;
+    height: 350px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.card .circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.card .circle:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #d83133;
+    clip-path: circle(120px at center);
+    transition: 0.5s;
+}
+.card:hover .circle:before{
+    background: #0065c3;
+    clip-path: circle(400px at center);
+}
+.card img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 500px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.card:hover img{
+    left: 72%;
+    height: 600px;
+}
+.card .content{
+    position: relative;
+    width: 50%;
+    left: 20%;
+    padding: 20px 20px 20px 40px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.card:hover .content{
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+.card .content h2{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 2em;
+    line-height: 1em;
+    margin-bottom: 5;
+}
+.card .content p{
+    color: #fff;
+}
+.card .content a{
+    position: relative;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #fff;
+    margin-top: 10px;
+    display: inline-block;
+    color: #111;
+    text-decoration: none;
+    font-weight: 500;  
+}
+
+@media(max-width: 991px)
+{
+    .card{
+        width: auto;
+        max-width: 350px;
+        align-items: flex-start;
+        margin: 10px;
+    }
+    .card:hover{
+        height: 600px;
+    }
+    .card .content{
+        width: 100%;
+        left: 0;
+        padding: 30px;
+    }
+    .card:hover img{
+        top: 75%;
+        left: 50%;
+        height: 420px;
+    }
+}
+@media(max-width: 420px){
+
+    .card .content{
+        padding: 30px;
+    }  
+}
+.toast{
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    border-radius: 12px;
+    background: #fff;
+    padding: 20px 35px 20px 25px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    border-left: 6px solid #4070f4;
+    overflow: hidden;
+    transform: translateX(calc(100% + 30px));
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+.toast.active{
+    transform: translateX(0%);
+}
+
+.toast .toast-content{
+    display: flex;
+    align-items: center;
+}
+
+.toast-content .check{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    background-color: #4070f4;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+.toast-content .message{
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+.message .text{
+    font-size: 20px;
+    font-weight: 400;;
+    color: #666666;
+}
+
+.message .text.text-1{
+    font-weight: 600;
+    color: #333;
+}
+
+.toast .close{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    padding: 5px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.toast .close:hover{
+    opacity: 1;
+}
+
+.toast .progress{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: #ddd;
+}
+
+.toast .progress:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #4070f4;
+}
+
+.progress.active:before{
+    animation: progress 5s linear forwards;
+}
+
+@keyframes progress {
+    100%{
+        right: 100%;
+    }
+}
+
+.toast.active ~ a{
+    pointer-events: none;
 }
