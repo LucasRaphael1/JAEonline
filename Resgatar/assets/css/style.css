@@ -287,8 +287,7 @@ body.dark .switch::before{
 }
 .timer-body{
     text-align: center;
-    padding: 100px 60px;
-    background: #90cbf3;
+    padding: 100px 200px;
     font-family: sans-serif;
     font-weight: lighter;
 }
@@ -318,4 +317,4 @@ body.dark .switch::before{
     margin-top: 15px;
     font-size: .35em;
     font-weight: 400;
-    }
+}
