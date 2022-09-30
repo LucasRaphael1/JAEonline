@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../Favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../Favicon/favicon-16x16.png">
     <link rel="manifest" href="../Favicon/site.webmanifest">  
-    <title>Formulário</title>
+    <title>Formulário</tite>
 </head>
 
 <body>
@@ -31,22 +31,32 @@
 
                 <div class="input-group">
                     <div class="input-box">
-                        <label for="firstname">Primeiro Nome</label>
-                        <input id="firstname" type="text" name="firstname" placeholder="Digite seu primeiro nome" required>
+                        <label for="name">Nome Completo</label>
+                        <input id="name" type="text" name="name" placeholder="Digite seu nome completo" required>
                     </div>
 
                     <div class="input-box">
-                        <label for="lastname">Sobrenome</label>
-                        <input id="lastname" type="text" name="lastname" placeholder="Digite seu sobrenome" required>
+                        <label for="cgm">CGM</label>
+                        <input id="cgm" type="text" name="cgm" placeholder="Digite seu CGM" required>
                     </div>
                     <div class="input-box">
                         <label for="class">Turma</label>
-                        <input id="class" type="class" name="class" placeholder="Digite sua turma" required>
+                    <div class="select">
+                        <select name="Turma" id="turma"><option selected disabled>Selecione a sua turma</option>
+                            <option value="6ano">6º</option>
+                            <option value="7ano">7º</option>
+                            <option value="8ano">8º</option>
+                            <option value="9ano">9º</option>
+                            <option value="9ano">1º</option>
+                            <option value="9ano">2º</option>
+                            <option value="9ano">3º</option>
+                        </select>
                     </div>
+                </div>
 
                     <div class="input-box">
-                        <label for="number">Celular (opcional)</label>
-                        <input id="number" type="tel" name="number" placeholder="(xx) x xxxx-xxxx">
+                        <label for="number">Celular (Whatsapp)</label>
+                        <input id="number" type="tel" name="number" placeholder="(xx) x xxxx-xxxx" required>
                     </div>
 
                     <div class="input-box">
@@ -90,7 +100,7 @@
                     </div>
                 </div>
                 
-                <button class="continue-button"><a href="Menu/index.html">Cadastrar</a></button>
+                <button class="continue-button"><a href="hub.html">Cadastrar</a></button>
                 <span id="pagina"></span>
             </form>
         </div>

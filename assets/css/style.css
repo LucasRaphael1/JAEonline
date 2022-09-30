@@ -209,3 +209,27 @@ body {
         margin-top: 0.5rem;
     }
 }
+select{
+    margin: 0.6rem 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+
+    font-size: 0.8rem;
+}
+select::-ms-expand {
+    display: none;
+}
+.select {
+
+    height: 5em;
+    line-height: 3;
+    overflow: hidden;
+    border-radius: .25em;
+}
+.select::after {
+    background-color: #6c63ff;
+
+}
