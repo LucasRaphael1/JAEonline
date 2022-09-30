@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../Favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../Favicon/favicon-16x16.png">
     <link rel="manifest" href="../Favicon/site.webmanifest">  
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -117,31 +117,27 @@
             <div class="content">
                 <h2>Combo Pão de Queijo + Toddynho</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis at eius voluptatibus illo maxime et tempora.</p>
-                    <a href="#" class="button">Resgatar</a>
+                    <a href="#" class="button" id="show-toast" onclick="showToast()">Resgatar</a>
             </div>
-            <img src="assets/img/img.png">
+            <img src="img.png">
         </div>
     </div>
-
-    <div class="wrapper">
-        <div id="toast">
-            <div class="container-1">
-                <i class="fas fa-check-square"></i>
+        <div class="wrapper">
+            <div id="toast">
+                <div class="container-1">
+                    <i class="fas fa-check-square"></i>
+                </div>
+                <div class="container-2">
+                    <p>Success</p>
+                    <p>Your changes are saved successfully.</p>
+                </div>
+                <button id="close" onclick="closeToast()">
+                    &times;
+                </button>
             </div>
-            <div class="container-2">
-                <p>Success</p>
-                <p>Your changes are saved successfully.</p>
-            </div>
-            <button id="close" onclick="closeToast()">
-                &times;
-            </button>
         </div>
-    </div>
-    <button id="show-toast" onclick="showToast()">Show Toast Message</button>
 
 
-
-
-    <script src="assets/js/main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
